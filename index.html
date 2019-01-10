@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SPORT PSYCHE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="js/froogaloop2.min.js"></script> <!--froogaloop för vimeo player-->
+    <!-- Object Fit polyfill -->
+    <script src="https://unpkg.com/object-fit-images/dist/ofi.min.js"></script>
+
+    <!-- Jarallax -->
+    <link href="jarallax/jarallax.css" rel="stylesheet">
+    <script src="jarallax/jarallax.js"></script>
+    <script src="jarallax/jarallax-video.js"></script>
+    <script src="jarallax/jarallax-element.js"></script>
+    </head> 
+
+    <body>
+        <!--MOBILE START-->
+        <div id="invincible-div"> <!--Osynlig div + space för att sticky logo ska fungera-->
+            <div id="invincible-space"></div>
+            <div id="logo"><img src="assets/logos/storlogo.png"></div>
+        </div><!--Osynlig div Slut-->
+        <div id="mobile-startpage"> <!--Mobil startpage Start-->
+            <div class="jarallax" data-speed="1.2" data-video-src="https://vimeo.com/118063327"></div>
+        </div>
+        <!--MOBILE END-->
+
+        <!--DESKTOP STARTPAGE START-->
+        <!--<div id="loader"></div> lazy load-->
+        <div id="desktop-startpage">
+            
+            <div class="jarallax" data-speed="1.2" data-video-src="mp4:SPORT_PSYCHE_DRAFT_V.1.mp4"></div>  <!--mp4:SPORT_PSYCHE_DRAFT_V.1.mp4-->
+            <!--<a href="#" class="x-button close-startpage">X</a>-->
+            <div id="desktop-logo"><img src="assets/logos/storlogo.png"></div>
+
+            <div id="main-menu">
+                <a href="#" id=""></a>
+                <a href="#" class="close-startpage" id="lb-button">LOOKBOOK</a>  
+                <a href="#" id="playfilm-button">PLAY FILM</a>
+            </div>
+            <!--
+            <div id="intro-text"><p>Beckmans final year Fashion students have created eleven collections in collaboration with six Swedish brands working within sports and leisurewear. The result is a thought-provoking mix of well-established traditional forms and contemporary re-interpretations, a tantalising glimpse of what’s to come from the next generation of designers and communicators.</p></div>-->
+        </div>
+        <div id="play-film">
+            <div class="top">
+            <div class="wrapper">
+            <iframe id="player1" src="https://player.vimeo.com/video/252309572?loop=1title=0&byline=0&portrait=0&transparent=0&autoplay=0" width="640" height="480" frameborder="0" title="Funny Cat Videos For Kids" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true"></iframe>
+            
+            </div>
+            </div>
+            <div id="player-controls">
+                <a class="player-buttons" id="play-button">PLAY</a><a class="player-buttons" id="pause-button">PAUSE</a><a class="player-buttons" id="restart-button">RESTART</a>
+            </div>
+            <a href="#" class="x-button" id="close-film">X</a>
+        </div>
+        <!--DESKTOP STARTPAGE END-->
+
+
+        
+        <!--LOOK BOOK START-->
+        <div id="lookbook-container">
+            <<a href="#" class="x-button open-startpage">X</a>
+            <div id="card-container"> <!--Card-container start-->
+                <div id="small-logo"><a href="#" class="open-startpage"><img src="assets/logos/litenlogo.png"></a></div>
+                <div id="parent">
+                    <!--KORT 1 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/jon.tif"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 2 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/felicia.tif"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 3 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/emma.tif"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 4 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/jannica.tif"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 5 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/adam.tif"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 6 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/benny.jpg"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 7 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/sandra.jpg"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 8 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/felicia.jpg"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 9 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/benny.jpg"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 10 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/sandra.jpg"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+                    <!--KORT 11 NEDAN-->
+                    <label>
+                        <input type="checkbox"/>
+                            <div class="card">
+                                <div class="front child">
+                                    <img class="front-img" src="assets/img/felicia.jpg"> <!--bild här-->
+                                    <img class="gif front-img" src="assets/rolling-text/erik.png"> <!--text-png här-->
+                                </div>
+                                <div class="back child"><img src="assets/text-back/jon.png"></div> <!--baksida här-->
+                            </div>
+                    </label>
+
+                    <!--COLOPHON-->
+                    <div id="colophon-desktop">
+                        <p>Fashion Department <br> Pär Engsheden <br><br>Senior Lecturers <br> Ulrika Elovsson <br> Martin Bergström <br> Lisbeth Stålborg <br> Linda Nurk <br>  <br> Visiting Tutors <br> Maja Sjöberg <br>Pernille Holm <br> Karin Kahlund <br> Valeria Engbom <br>Marie-Louise Nordin <br> Kumi Edström Kawaji <br> Svitlana Kovalenko <br><br> Artistic Interpretation  <br> Senior Lecturer <br> Thomas Magnusson <br> </p>
+                        <p>Fashion Department <br> Pär Engsheden <br><br>Senior Lecturers <br> Ulrika Elovsson <br> Martin Bergström <br> Lisbeth Stålborg <br> Linda Nurk <br>  <br> Visiting Tutors <br> Maja Sjöberg <br>Pernille Holm <br> Karin Kahlund <br> Valeria Engbom <br>Marie-Louise Nordin <br> Kumi Edström Kawaji <br> Svitlana Kovalenko <br><br> Artistic Interpretation  <br> Senior Lecturer <br> Thomas Magnusson <br></p>
+                        <p>Fashion Department <br> Pär Engsheden <br><br>Senior Lecturers <br> Ulrika Elovsson <br> Martin Bergström <br> Lisbeth Stålborg <br> Linda Nurk <br>  <br> Visiting Tutors <br> Maja Sjöberg <br>Pernille Holm <br> Karin Kahlund <br> Valeria Engbom <br>Marie-Louise Nordin <br> Kumi Edström Kawaji <br> Svitlana Kovalenko <br><br> Artistic Interpretation  <br> Senior Lecturer <br> Thomas Magnusson <br></p>
+                    </div>
+                    <div id="colophon-mobile" class="child">
+                        <div id="colophon-mobile-inner">
+                            <p>Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br>Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br><br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br>Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br><br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br> Web design: Johanna Lundberg <br> Art Director: Johanna Lundberg <br></p>
+                            </div>
+                    </div>
+                    
+
+                </div> <!--Parent end-->
+            </div><!--Card-container end-->
+            <div id="lookbook-bottom"><p>Beckmans Fashion Collaboration</p><p class="text-right"> &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Beckmans College of Design</p></div>
+        </div> <!--lookbook-container end-->
+
+    
+    </body > 
+</html>
