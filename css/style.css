@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'sharp_grotesklight_25';
-    src: url('../fonts/sharpgrotesk-light25-webfont.woff2') format('woff2'),
-         url('../fonts/sharpgrotesk-light25-webfont.woff') format('woff');
+    src: url('../fonts/SharpGroteskLight25-Regular.woff2') format('woff2'),
+         url('../fonts/SharpGroteskLight25-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -31,25 +31,22 @@ html, body {
 	-webkit-font-smoothing: antialiased;
   	font-smoothing: antialiased;
   	text-rendering: optimizeLegibility;
+  	background:#1e1909;
 }
 
-p {
-	font-family: 'sharp_groteskbook_20';
-	color: white;
-}
-
-a {
+p, a, h1, h2 {
+	font-family: 'sharp_grotesklight_25';
+	color: #ededed;
 	text-decoration: none;
+	font-weight: normal;
 }
 
-
-#mobile-startpage, #colophon-mobile {
+#mobile-startpage {
 	display: none;
 }
 
 .jarallax {
     height: 100%;
-    position: fixed;
 }
 
 #invincible-div {
@@ -58,7 +55,7 @@ a {
 
 
 /*-------LOADING PAGE START------*/
-#loader {
+.loader {
     position: fixed;
     top: 0;
     width: 100%;
@@ -67,15 +64,6 @@ a {
     z-index: 100;
 }
 
-/* Loaded */
-.loaded-fade #loader {
-    opacity: 0;
-    transition: 2s ease;
-}
-
-.loaded-now #loader {
-	display: none;
-}
 /*-------LOADING PAGE END------*/
 
 /*-------FILM PLAYER START------*/
@@ -101,30 +89,39 @@ a {
   height: 100%;
 }
 
+.x-button {
+	right: 3vh;
+	top: 2vh;
+	font-family: 'KRAFT';
+	z-index: 20;
+	color: #fff;
+	font-size: 4vh;
+	position: fixed;
+}
 
 #player-controls {
 	width: auto;
 	height: 100px;
 	z-index: 100;
 	position: fixed;
-	top: 10px;
-	left: 10px;
+	top: 3vh;
+	left: 3vh;
 }
 
 .player-buttons {
 	font-family: 'sharp_grotesklight_25';
-	font-size: 3vh;
-	color: #fff;
+	font-size: 3.2vh;
+	letter-spacing: 0.1vh;
+	color: #ededed;
 	margin:0 1vh 0 1vh;
 	cursor: pointer;
-	opacity: 0.3;
+	opacity: 0.2;
 }
 
 .player-buttons:hover {
 	opacity: 1;
 	transition: 500ms;
 }
-
 
 .wrapper {
   position: relative;
@@ -136,55 +133,105 @@ a {
 /*-------FILM PLAYER END------*/
 
 /*-------START PAGE START------*/
+#mobile-text, #pil {
+	display: none;
+}
 
 #desktop-logo {
 	position: fixed;
 	display: flex;
 	justify-content: center;
 	width: 100vw;
-	top: 45vh;
-	z-index: 102;
+	top: 36vh;
 }
 
 #desktop-logo img {
-	height: 11vh;
-	transition: 500ms ease;
+	height: 27vh;
+	width: auto;
+	transition: 200ms ease;
+}
+
+#desktop-logo #tiny-logo {
+	display: none;
 }
 
 #desktop-startpage {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
+	background:#000;
 }
 
-#main-menu {
+.side-rollers {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	position: absolute;
+	overflow: hidden;
+}
+
+	#beckmans {
+		position: absolute;
+		left: 1vw;
+		height: 120vh;
+		mix-blend-mode: lighten;
+	}
+
+	#fashion {
+		position: absolute;
+		right: 1vw;
+		height: 120vh;
+		mix-blend-mode: lighten;
+	}
+
+	#lookbook-container .side-rollers {
+		display: none;
+	}
+
+.main-menu {
 	position: fixed;
-	top:56vh;
+	/*top:92vh;*/
 	z-index: 30;
+	display: flex;
+	justify-content: center;
+	width: 100vw;
 }
 
-#playfilm-button { 
-	position: fixed;
-	right: 55vw;
+	#playfilm-button { 
+		position: fixed;
+		/*right: 55vw;*/
+		top: 3vh;
+	}
+
+	#lb-button {
+		position: fixed;
+		/*left: 55vw;*/
+		bottom:2.5vh;
+	}
+
+	.main-menu a {
+		font-family: 'sharp_grotesklight_25';
+		font-size: 3.2vh;
+		color: #ededed;
+		letter-spacing: 0.1vh;
+	}
+
+.fashion-collab {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 6vh;
+	display: none;
 }
 
-#lb-button {
-	position: fixed;
-	left: 55vw;
+#mobile-page .fashion-collab p {
+	font-size: 2.3vh;
 }
 
-#main-menu a {
-	font-family: 'sharp_grotesklight_25';
-	font-size: 3.5vh;
-	color: #fff;
-	letter-spacing: 0.2vh;
-}
-
-#main-menu a:hover {
-	font-family: 'KRAFT';
-	margin-top: 1.7vh;
-	font-size: calc(3.5*0.94167vh);
-	letter-spacing: 0;
+#desktop-startpage .fashion-collab p {
+	font-size: 2vh;
+	line-height: 2.7vh;
 }
 
 #intro-text {
@@ -194,67 +241,56 @@ a {
 	width: 90vw;
 	height: auto;
 	z-index: 30;
-	color: #fff;
+	color: #ededed;
 }
 
 #intro-text p {
-	font-size: 1.7vh;
-}
-
-#lb-button:hover {
-	left: 55.5vw; /*så kraft inte hoppar för mkt*/
-}
-
-#playfilm-button:hover {
-	right: 54.5vw; /*så kraft inte hoppar för mkt*/
-}
-
-.x-button {
-	right: 3vh;
-	top: 2vh;
-	font-family: 'KRAFT';
-	z-index: 20;
-	color: #fff;
-	font-size: 4vh;
-	position: fixed;
+	font-family: 'sharp_grotesklight_25';
+	font-size: 1.4vh;
+	line-height: 1.7vh;
 }
 
 /*-------START PAGE END------*/
 
+#logo-sticky-div {
+	height: 10vh;
+	width: 800vh;
+	position: absolute;
+	left: 0;
+}
+
+#logo-sticky-space {
+	width: 45vh; /*bredden till vänster om logo*/
+	height: 10vh;
+	float: left;
+	display: inline-block;
+}
+
 #small-logo {
-	top: 2vh;
-	left: 2vh;
+	/*left: 0;*/
+	/*position: sticky;*/
+	/*position: -webkit-sticky;*/
 	position: fixed;
+	right: 0;
+	top:0;
 	z-index: 20;
+	display: inline-block;
 }
 
 #small-logo img{
-	height: 9vh;
+	height: 12vh;
 	width: auto;
+	margin-top: 0vh;
+	margin-left: -5vh;
 }
 
 #lookbook-container {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	display: none;
-	position: absolute;
-	background:#1e1909;
-}	
-
-#lookbook-bottom {
-	left: 6vh;
-	right: 3vh;
 	position: fixed;
-	bottom: 1.6vh;
-}
-
-#lookbook-bottom p {
-	font-family: 'sharp_grotesklight_25';
-	font-size: 1.7vh;
-	color: #fff;
-	display: inline-block;
-	line-height: 1vh;
-}
+	
+}	
 
 .text-right {
 	float: right;
@@ -268,22 +304,62 @@ a {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	top: 0;
+	background:#1e1909;
 	position: absolute;
+
 }
 
 ::-webkit-scrollbar { 
     display: none; 
 }
 
+.gif {
+	mix-blend-mode: darken;
+}
+
 #parent {
-	width: 800vh; /*Bredden på hela containern*/
-	margin-left: 6vh;
+	width: 930vh; /*Bredden på hela containern*/
+	margin-left: 5vh;
 	position: relative;
 }
 
+#text-space {
+	display: inline-block;
+	width: 47vh;
+	height: 90vh;
+	position: relative;
+	margin-left: 0;
+	margin-right: 6vh;
+}
+
+	#text-space img {
+		position: absolute;
+		width: 100%;
+		top: 0;
+	}
+
+	#text-space p {
+		text-transform: uppercase;
+		font-size: 1.60vh;
+		position: absolute;
+		top: 47vh;
+		line-height: 1.5;
+	}
+
+	#text-space #menu {
+		color: #ededed;
+		text-transform: uppercase;
+		font-size: 1.60vh;
+		line-height: 1.5;
+		position: absolute;
+		bottom: 0;
+		display: block;
+		font-family: 'KRAFT';
+	}
+
 .front, .back {
 	display: inline-flex;
-	background:#fff;
+	background:#ededed;
 }
 
 .front-img {
@@ -294,39 +370,94 @@ a {
 
 .card img {
 	height: 100%;
-	width: 100%;
+	width: auto;
 }
 
-#colophon-desktop {
+.card video {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	/*background: red;*/
+
+}
+
+.colophon {
 	position: relative;
 	display: inline-block;
-	width: auto;
+	width: 47vh;
+	height: 90vh;
+	padding-top: 5vh;
+	margin-left: 0;
 	-webkit-user-select: text;  /* Chrome all / Safari all */
 }
+	#colophon-header {
+		font-size: 4vh;
+		position: absolute;
+		top: 4vh;
+		left: 1.5vh;
+		font-family: 'KRAFT';
+		letter-spacing: 0.2vh;
+	}
 
-#colophon-desktop p {
-	font-family: 'sharp_groteskbook_20';
-	color: white;
-	font-size: 2vh;
-	height: 100%;
-	width: auto;
-	display:inline-block;
-	margin-left: 2vh;
-}
+	.colophon h1 {
+		font-size: 1.8vh;
+		line-height: 2.4vh;
+		/*margin-top: 1vh;*/
+		margin-bottom: 1.5vh;
+		padding-left: 0;
+		/*letter-spacing: 0.2vh;*/
+	}
+
+	.colophon h2 {
+		font-size: 1.5vh;
+		text-transform: uppercase;
+		margin: 0.6vh 0 0.3vh 0;
+		/*letter-spacing: 0.1vh;*/
+	}
+
+	.colophon p {
+		/*font-family: 'sharp_groteskbook_20';*/
+		color: white;
+		/*position: absolute;*/
+		top: 0;
+		font-size: 1.4vh;
+		line-height: 1.9vh;
+		height: 100%;
+		width: auto;
+		display:inline-block;
+		margin-left: 1.5vh;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	.colophon .colophon-left {
+		margin-left: 3%;
+		position: absolute;
+		margin-top: 11.2vh;
+		width: 47%;
+	}
+
+	.colophon .colophon-right {
+		margin-left: 53%;
+		position: absolute;
+		margin-top: 11.2vh;
+		/*background:red;*/
+		width: 47%;
+	}
 /*-------CARD CONTAINER END------*/
 
 /*-------CARD FLIP START------*/
 
 label {
-    -webkit-perspective: 1000vh;
-    perspective: 1000vh;
+    -webkit-perspective: 700vh;
+    perspective: 700vh;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     display: inline-block;
-    height: 86vh; 	/*-------Här ändrar man storleken på korten------*/
-	width: calc(1200/1980*86vh);
+    height: 90vh; 	/*-------Här ändrar man storleken på korten 86------*/
+	width: calc(1200/1980*90vh);
 	margin-right: 4vh;
-	margin-top: 6.8vh;
+	margin-top: 4.8vh;
 }
 
 .card {
@@ -338,7 +469,6 @@ label {
     -webkit-transition: all 600ms;
     transition: all 500ms ease;
     z-index: 20;
-
 }
 
     .card div {
@@ -348,37 +478,59 @@ label {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 2px;
-
     }
 
     .card .back {
         -webkit-transform: rotateY(180deg);
         transform: rotateY(180deg);
-
     }
 
 input {
     display: none;
 }
 
+
 :checked + .card {
     transform: rotateY(180deg) ;
     -webkit-transform: rotateY(180deg);
 }
+
+
 /*-------CARD FLIP END------*/
 
-@media only screen and (max-aspect-ratio: 12/10) { 
+@media only screen and (max-aspect-ratio: 16/10) { 
 
-  #desktop-logo img{
-  	height: 9vh;
-  	
-  }
+#desktop-logo {
+	top: 40vh;
+}
 
+ #desktop-logo img{
+  	height: 21vh;
+ }
+
+}
+
+@media only screen and (max-aspect-ratio: 13/10) {
+
+#desktop-logo {
+ 	top: 35vh;
+}
+	#desktop-logo img{
+	  	height: 30vh;
+	}
+
+	#desktop-logo #tiny-logo {
+		display: block;
+		top: 35vh;
+	}
+
+	#desktop-logo #big-logo {
+		display: none;
+	}
 
 }
 
 @media only screen and (min-width: 600px) { /* only desktop */
-
 
 .card:hover {
 	-webkit-box-shadow: 0 0 5vh 0.4vh rgba(255,255,255,0.6);
@@ -387,91 +539,250 @@ input {
 }
 
 .front:hover { /* scale fungerar ej på back */
-	-webkit-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    transform: scale(1.01);
-    transition: 200ms ease;
+	/*-webkit-transform: scale(1.01);*/
+    /*-ms-transform: scale(1.01);*/
+    /*transform: scale(1.01);*/
+    /*transition: 200ms ease;*/
 }
 
+.main-menu a:hover {
+	font-family: 'KRAFT';
+	/*margin-top: 1.8vh;*/
+	font-size: calc(3.2*0.94vh);
+	/*letter-spacing: 0;*/
+}
+
+#playfilm-button:hover {
+	/*right: 54.7vw; *//*så kraft inte hoppar för mkt*/
+	margin-top: 0.45vh;
+	letter-spacing: 0.05;
+}
+
+#lb-button:hover {
+	/*left: 55.5vw;*/ /*så kraft inte hoppar för mkt*/
+	margin-top: 0.45vh;
+	letter-spacing: -0.1;
+}
 
 }
 
-@media only screen and (max-width: 600px) { /* only mobile */
-  #mobile-startpage {
+@media only screen and (max-width: 900px) and (orientation: portrait) { /* only mobile */
+
+.loader {
+	display: none;
+}
+
+ #mobile-page {
+ 	scroll-snap-type: y mandatory;
+ 	-webkit-overflow-scrolling: touch;
+ 	width: 100vw;
+	height: 284.85vh;
+ }
+
+ #mobile-text {
+ 	display: block;
+ 	width: 90vw;
+ 	position: relative;
+ 	margin: 7vh 0 7vh 6vw;
+ }
+
+ #mobile-text img {
+ 	width: 100%;
+ }
+
+ #mobile-startpage {
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
 	top: 0;
 	z-index: 0;
 	display: block;
+	background:#000;
 }
 
+.fashion-collab {
+	top: 0;
+}
 
-#logo {
+.vertical-snap {
+	scroll-snap-align: center; 
+}
+
+#mobile-video {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	opacity: 1;
+}
+
+#video-cover {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background:#1e1909;
+	display: none;
+}
+
+#mobile-logo {
 	position: -webkit-sticky;
 	position: sticky;
-	top: 10px;
-	z-index: 2;
+	top: 0vh;
+	z-index: 3;
+	width: 80vw;
+	left: 10vw;
+	transition: 500ms;
 }
 
-#parent {
-	width: 655vh; /*Bredden på hela containern*/
-	margin-left: 2vh;
+#mobile-logo.sticky {
+	width: 40vw;
+	left: 30vw;	
 }
 
-#logo img {
+#mobile-logo img {
 	width: 100%;
+}
+
+#invincible-space {
+	height: 34vh;
 }
 
 #invincible-div {
 	width: 100vw;
-	height: 200vh;
+	height: 250vh;
 	position: absolute;
 	display: block;
 }
 
-#invincible-space {
-	height: 40vh;
+#parent {
+	width: 850vh; /*Bredden på hela containern calc((11*88*1200/1980vh)+(2*100vw))  602+100vh*/
+	margin-left: 2vh;
+}
+
+.main-menu {
+	position: fixed;
+	top:3vh;
+	width: 100vw;
+	height: 20vh;
+	z-index: 2;
+	display: block;
+}
+
+	.main-menu a {
+		display: block;
+		/*margin-top: 2vh;*/
+		text-align: center;
+	}
+
+ #pil {
+	position: absolute;
+	bottom: 3vh;
+	width: 7vw;
+	margin-left: 45vw;
+	height: 15vw;
+	display: flex;
+	justify-content: center;
+}
+	#pil img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	#beckmans {
+		left: 2vw;
+		height: 120vh;
+	}
+
+	#fashion {
+		right: 2vw;
+		height: 120vh;
+	}
+
+#playfilm-button, #lb-button { 
+	position: relative;
 }
 
 #card-container {
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
-	position: relative;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 100vh;
+	background:none;
 }
 
 .child {
 	scroll-snap-align: center; 
 }
 
-
 #lookbook-container {
 	display: inline-flex;
 	justify-content: center;
-	position: relative;
+	position: absolute;
+	overflow-y: hidden;
 }
 
-.menu, #lookbook-bottom, #small-logo, #desktop-startpage, #loader, #colophon-desktop, .x-button, #play-film{
+#lookbook-bottom, #small-logo, #desktop-startpage, .x-button, #play-film, #text-space, .side-rollers{
+	display: none;
+}
+#colophon-header {
 	display: none;
 }
 
-#colophon-mobile {
-	display: inline-block;
-	height: 80vh; 	/*-------Här ändrar man storleken på korten------*/
-	width: 50vh;
-	overflow-y: scroll;
-	overflow-x: hidden;
+.colophon { /*MOBILE*/
+	width: 100vw;
+	height: 95vh;
+	margin: 0 1vh 0 1vh;
+	/*margin-top: 6.5vh;*/
+	top: 5vh;
 }
 
-#colophon-mobile p {
-	justify-content: center;
-	margin-left: 20%;
-	font-size: 2.3vh;
-}
+	.colophon p {
+		font-size: 2.6vw;
+		line-height: 3.6vw;
+		margin-top: 0;
+		width: 44%;
+		/*font-family: 'sharp_groteskbook_20';*/
+		white-space: nowrap;
+	}
+
+	.colophon h1 {
+		font-size: 3.7vw;
+		line-height: 4vw;
+		/*margin-top: 1vh;*/
+		margin-bottom: 2vw;
+		padding-left: 0;
+		/*letter-spacing: 0.2vh;*/
+	}
+
+	.colophon h2 {
+		font-size: 2.6vw;
+		line-height: 2.6vw;
+		/*font-family: 'sharp_groteskbook_20';*/
+		text-transform: uppercase;
+		margin: 0.7vw 0 0 0;
+		/*letter-spacing: 0.1vh;*/
+	}
+
+	.colophon .colophon-left {
+		margin-left: 3%;
+		margin-top: 0;
+		width: 47%;
+	}
+
+	.colophon .colophon-right {
+		margin-left: 53%;
+		margin-top: 0;
+		width: 47%;
+	}
 
 label {
-	margin: 11vh 0.4vh 0 0.4vh;
-	height: 78vh; 	/*-------Här ändrar man storleken på korten------*/
-	width: calc(1200/1980*78vh);
+	margin: 6vh 0.4vh 6vh 0.4vh;
+	height: 88vh; 	/*-------Här ändrar man storleken på korten------*/
+	width: calc(1200/1980*88vh);
+	/*display: none;*/
 }
 
 }
