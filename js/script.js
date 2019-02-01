@@ -8,7 +8,7 @@ var hoverEl = null;
 $(document).ready(function(){
 	$(".close-startpage").click(function(){
 		$("#lookbook-container").show();
-		// $("#desktop-startpage").hide();
+		$("#desktop-startpage").hide();
 		$("#play-film").hide();
 	})
 
@@ -20,15 +20,15 @@ $(document).ready(function(){
 
 	$("#playfilm-button").click(function(){
 		$("#play-film").show();
-		// $("#desktop-startpage").hide();
+		$("#desktop-startpage").hide();
 	})
 
-	// if ( $(window).width() > 600) {
-	// 	$('html, body, *').mousewheel(function(e, delta) {
-	//         this.scrollLeft -= (delta * 1); // ändrar takten på scroll
-	//         e.preventDefault();
-	//     });
-	// }
+	if ( $(window).width() > 600) {
+		$('html, body, *').mousewheel(function(e, delta) {
+	        this.scrollLeft -= (delta * 1); // ändrar takten på scroll
+	        e.preventDefault();
+	    });
+	}
 
 	//mobil
 	$(window).scroll(function() { //förminskar logon när man scrollar
@@ -57,10 +57,6 @@ $(document).ready(function(){
 			$(".fade-on-scroll").fadeIn(100);
 		}
 	});
-
-    // setTimeout(function(){ // loader page
-    //     $('body').addClass('loaded-now');
-    // }, 3000);
 
     setTimeout(function(){ // loader page
         // $('body').addClass('loaded-fade');

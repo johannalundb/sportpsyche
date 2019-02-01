@@ -56,6 +56,7 @@ p, a, h1, h2 {
 
 /*-------LOADING PAGE START------*/
 .loader {
+	display: none;
     position: fixed;
     top: 0;
     width: 100%;
@@ -250,6 +251,11 @@ p, a, h1, h2 {
 	line-height: 1.7vh;
 }
 
+#load-this {
+	height: 1px;
+	width: 1px;
+}
+
 /*-------START PAGE END------*/
 
 #logo-sticky-div {
@@ -267,9 +273,6 @@ p, a, h1, h2 {
 }
 
 #small-logo {
-	/*left: 0;*/
-	/*position: sticky;*/
-	/*position: -webkit-sticky;*/
 	position: fixed;
 	right: 0;
 	top:0;
@@ -278,15 +281,15 @@ p, a, h1, h2 {
 }
 
 #small-logo img{
-	height: 12vh;
+	height: 11.5vh;
 	width: auto;
 	margin-top: 0vh;
 	margin-left: -5vh;
 }
 
 #lookbook-container {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	display: none;
 	position: fixed;
 	
@@ -317,6 +320,10 @@ p, a, h1, h2 {
 	mix-blend-mode: darken;
 }
 
+.text-img {
+	display: none;
+}
+
 #parent {
 	width: 930vh; /*Bredden på hela containern*/
 	margin-left: 5vh;
@@ -340,7 +347,7 @@ p, a, h1, h2 {
 
 	#text-space p {
 		text-transform: uppercase;
-		font-size: 1.60vh;
+		font-size: 1.6vh;
 		position: absolute;
 		top: 47vh;
 		line-height: 1.5;
@@ -356,6 +363,73 @@ p, a, h1, h2 {
 		display: block;
 		font-family: 'KRAFT';
 	}
+
+
+/*-------COLOPHON DESKTOP START-----*/
+
+.colophon {
+	position: relative;
+	display: inline-block;
+	width: 47vh;
+	height: 90vh;
+	padding-top: 5vh;
+	margin-left: 0;
+	-webkit-user-select: text;  /* Chrome all / Safari all */
+}
+	#colophon-header {
+		font-size: 4.5vh;
+		position: absolute;
+		top: 6.5vh;
+		left: 1.5vh;
+		font-family: 'KRAFT';
+		letter-spacing: 0.2vh;
+	}
+
+	.colophon h1, .colophon h2, .colophon p {
+		font-size: 1.4vh;
+		line-height: 1.9vh;
+		margin: 0;
+		padding: 0;
+	}
+
+	.colophon h1 {
+		text-transform: uppercase;
+		margin-bottom: 1.5vh;
+		padding-left: 0;
+	}
+
+	.colophon h2 {
+		margin-top:0.8vh;
+	}
+
+	.colophon p {
+		display:inline-block;
+		margin-left: 1.5vh;
+	}
+
+	.colophon .colophon-left, .colophon .colophon-right, .colophon .colophon-wide {
+		position: absolute;
+		margin-top: 21.5vh;
+	}
+
+	.colophon .colophon-left {
+		margin-left: 3%;
+		width: 47%;
+	}
+
+	.colophon .colophon-right {
+		margin-left: 53%;
+		width: 47%;
+	}
+
+	.colophon .colophon-wide {
+		margin-left: 3%;
+		width: 60%;
+	}
+/*-------COLOPHON DESKTOP END-----*/
+/*-------CARD CONTAINER END------*/
+
+/*-------CARD FLIP START------*/
 
 .front, .back {
 	display: inline-flex;
@@ -376,77 +450,9 @@ p, a, h1, h2 {
 .card video {
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	/*position: absolute;*/
 	/*background: red;*/
-
 }
-
-.colophon {
-	position: relative;
-	display: inline-block;
-	width: 47vh;
-	height: 90vh;
-	padding-top: 5vh;
-	margin-left: 0;
-	-webkit-user-select: text;  /* Chrome all / Safari all */
-}
-	#colophon-header {
-		font-size: 4vh;
-		position: absolute;
-		top: 4vh;
-		left: 1.5vh;
-		font-family: 'KRAFT';
-		letter-spacing: 0.2vh;
-	}
-
-	.colophon h1 {
-		font-size: 1.8vh;
-		line-height: 2.4vh;
-		/*margin-top: 1vh;*/
-		margin-bottom: 1.5vh;
-		padding-left: 0;
-		/*letter-spacing: 0.2vh;*/
-	}
-
-	.colophon h2 {
-		font-size: 1.5vh;
-		text-transform: uppercase;
-		margin: 0.6vh 0 0.3vh 0;
-		/*letter-spacing: 0.1vh;*/
-	}
-
-	.colophon p {
-		/*font-family: 'sharp_groteskbook_20';*/
-		color: white;
-		/*position: absolute;*/
-		top: 0;
-		font-size: 1.4vh;
-		line-height: 1.9vh;
-		height: 100%;
-		width: auto;
-		display:inline-block;
-		margin-left: 1.5vh;
-		margin-top: 0;
-		padding: 0;
-	}
-
-	.colophon .colophon-left {
-		margin-left: 3%;
-		position: absolute;
-		margin-top: 11.2vh;
-		width: 47%;
-	}
-
-	.colophon .colophon-right {
-		margin-left: 53%;
-		position: absolute;
-		margin-top: 11.2vh;
-		/*background:red;*/
-		width: 47%;
-	}
-/*-------CARD CONTAINER END------*/
-
-/*-------CARD FLIP START------*/
 
 label {
     -webkit-perspective: 700vh;
@@ -455,7 +461,7 @@ label {
     transform-style: preserve-3d;
     display: inline-block;
     height: 90vh; 	/*-------Här ändrar man storleken på korten 86------*/
-	width: calc(1200/1980*90vh);
+	width: 54.5vh; /*calc(1200/1980*90vh)*/
 	margin-right: 4vh;
 	margin-top: 4.8vh;
 }
@@ -478,6 +484,7 @@ label {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 2px;
+		transform-style: preserve-3d;
     }
 
     .card .back {
@@ -661,7 +668,7 @@ input {
 }
 
 .main-menu {
-	position: fixed;
+	position: absolute;
 	top:3vh;
 	width: 100vw;
 	height: 20vh;
@@ -717,6 +724,13 @@ input {
 	scroll-snap-align: center; 
 }
 
+.text-img { 
+	width: 100%;
+	mix-blend-mode: darken;
+	height: 100%;
+	display: block;
+ }
+
 #lookbook-container {
 	display: inline-flex;
 	justify-content: center;
@@ -724,7 +738,7 @@ input {
 	overflow-y: hidden;
 }
 
-#lookbook-bottom, #small-logo, #desktop-startpage, .x-button, #play-film, #text-space, .side-rollers{
+#lookbook-bottom, #small-logo, #desktop-startpage, .x-button, #play-film, #text-space, .side-rollers, .gif{
 	display: none;
 }
 #colophon-header {
@@ -738,45 +752,32 @@ input {
 	/*margin-top: 6.5vh;*/
 	top: 5vh;
 }
-
-	.colophon p {
+	
+	.colophon h1, .colophon h2, .colophon p {
 		font-size: 2.6vw;
 		line-height: 3.6vw;
+	}
+
+	.colophon p {
 		margin-top: 0;
 		width: 44%;
-		/*font-family: 'sharp_groteskbook_20';*/
 		white-space: nowrap;
 	}
 
 	.colophon h1 {
-		font-size: 3.7vw;
-		line-height: 4vw;
-		/*margin-top: 1vh;*/
+		text-transform: uppercase;
 		margin-bottom: 2vw;
-		padding-left: 0;
-		/*letter-spacing: 0.2vh;*/
+		/*padding-left: 0;*/
 	}
 
 	.colophon h2 {
-		font-size: 2.6vw;
-		line-height: 2.6vw;
-		/*font-family: 'sharp_groteskbook_20';*/
-		text-transform: uppercase;
 		margin: 0.7vw 0 0 0;
-		/*letter-spacing: 0.1vh;*/
 	}
 
-	.colophon .colophon-left {
-		margin-left: 3%;
+	.colophon .colophon-left, .colophon .colophon-right, .colophon .colophon-wide {
 		margin-top: 0;
-		width: 47%;
 	}
 
-	.colophon .colophon-right {
-		margin-left: 53%;
-		margin-top: 0;
-		width: 47%;
-	}
 
 label {
 	margin: 6vh 0.4vh 6vh 0.4vh;
