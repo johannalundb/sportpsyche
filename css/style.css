@@ -1,16 +1,7 @@
 @font-face {
-    font-family: 'sharp_groteskbook_20';
-    src: url('../fonts/sharpgrotesk-book20-webfont.woff2') format('woff2'),
-         url('../fonts/sharpgrotesk-book20-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'KRAFT';
     src: url('KRAFT.eot');
-    src: url('../fonts/KRAFT.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/KRAFT.woff2') format('woff2'),
+    src: url('../fonts/KRAFT.woff2') format('woff2'),
         url('../fonts/KRAFT.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -319,11 +310,11 @@ p, a, h1, h2 {
 	mix-blend-mode: darken;
 }
 
-.text-img {
+.mobile-img {
 	display: none;
 }
 
-#parent {
+#parent { /*desktop*/
 	width: 930vh; /*Bredden på hela containern*/
 	margin-left: 5vh;
 	position: relative;
@@ -406,25 +397,37 @@ p, a, h1, h2 {
 		margin-left: 1.5vh;
 	}
 
-	.colophon .colophon-left, .colophon .colophon-right, .colophon .colophon-wide {
+	.colophon-left, .colophon-right, .colophon-wide, .colophon-spons {
 		position: absolute;
 		margin-top: 21.5vh;
 	}
 
-	.colophon .colophon-left {
+	.colophon-left {
 		margin-left: 3%;
 		width: 47%;
 	}
 
-	.colophon .colophon-right {
+	.colophon-right {
 		margin-left: 53%;
 		width: 47%;
 	}
 
-	.colophon .colophon-wide {
+	.colophon-wide {
 		margin-left: 3%;
-		width: 60%;
+		width: 63%;
 	}
+
+	.colophon-spons {
+		margin-left: 72%;
+		width: 35%;
+	}
+
+		.colophon-spons img {
+			width: 100%;
+			height: auto;
+			mix-blend-mode: lighten;
+			opacity: 0.9;
+		}
 /*-------COLOPHON DESKTOP END-----*/
 /*-------CARD CONTAINER END------*/
 
@@ -582,7 +585,7 @@ input {
  	scroll-snap-type: y mandatory;
  	-webkit-overflow-scrolling: touch;
  	width: 100vw;
-	height: 284.85vh;
+	/*height: 284.85vh;*/
  }
 
  #mobile-text {
@@ -661,7 +664,7 @@ input {
 	display: block;
 }
 
-#parent {
+#parent { /*mobile*/
 	width: 850vh; /*Bredden på hela containern calc((11*88*1200/1980vh)+(2*100vw))  602+100vh*/
 	margin-left: 2vh;
 }
@@ -723,9 +726,8 @@ input {
 	scroll-snap-align: center;
 }
 
-.text-img {
+.mobile-img {
 	width: 100%;
-	mix-blend-mode: darken;
 	height: 100%;
 	display: block;
  }
@@ -737,7 +739,7 @@ input {
 	overflow-y: hidden;
 }
 
-#lookbook-bottom, #small-logo, #desktop-startpage, .x-button, #play-film, #text-space, .side-rollers, .gif{
+#lookbook-bottom, #small-logo, #desktop-startpage, .x-button, #play-film, #text-space, .side-rollers, .gif, .desktop-img{
 	display: none;
 }
 #colophon-header {
@@ -772,15 +774,20 @@ input {
 		margin: 0.7vw 0 0 0;
 	}
 
-	.colophon .colophon-left, .colophon .colophon-right, .colophon .colophon-wide {
+	.colophon-left, .colophon-right, .colophon-wide, .colophon-spons {
 		margin-top: 0;
+	}
+
+	.colophon-spons {
+		margin-left: 68%;
+		width: 30%;
 	}
 
 
 label {
 	margin: 6vh 0.4vh 6vh 0.4vh;
-	height: 88vh; 	/*-------Här ändrar man storleken på korten------*/
-	width: calc(1200/1980*88vh);
+	height: calc(1.65*87vw); 	/*-------Här ändrar man storleken på korten------*/
+	width: 87vw; /*calc(1200/1980*88vh*/
 	/*display: none;*/
 }
 
