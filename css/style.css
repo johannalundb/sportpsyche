@@ -315,7 +315,7 @@ p, a, h1, h2 {
 }
 
 #parent { /*desktop*/
-	width: 930vh; /*Bredden på hela containern*/
+	width: 900vh; /*Bredden på hela containern*/
 	margin-left: 5vh;
 	position: relative;
 }
