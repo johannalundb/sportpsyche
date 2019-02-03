@@ -272,9 +272,9 @@ p, a, h1, h2 {
 }
 
 #small-logo img{
-	height: 11.5vh;
+	height: 13.5vh;
 	width: auto;
-	margin-top: 0vh;
+	margin-top: -1vh;
 	margin-left: -5vh;
 }
 
@@ -315,7 +315,7 @@ p, a, h1, h2 {
 }
 
 #parent { /*desktop*/
-	width: 900vh; /*Bredden på hela containern*/
+	width: 950vh; /*Bredden på hela containern*/
 	margin-left: 5vh;
 	position: relative;
 }
@@ -360,11 +360,11 @@ p, a, h1, h2 {
 .colophon {
 	position: relative;
 	display: inline-block;
-	width: 47vh;
+	width: 57vh;
 	height: 90vh;
 	padding-top: 5vh;
 	margin-left: 0;
-	-webkit-user-select: text;  /* Chrome all / Safari all */
+	
 }
 	#colophon-header {
 		font-size: 4.5vh;
@@ -380,26 +380,31 @@ p, a, h1, h2 {
 		line-height: 1.9vh;
 		margin: 0;
 		padding: 0;
+		-webkit-user-select: text;  /* Chrome all / Safari all */
 	}
 
 	.colophon h1 {
 		text-transform: uppercase;
 		margin-bottom: 1.5vh;
+		margin-top:1.5vh;
 		padding-left: 0;
 	}
 
 	.colophon h2 {
 		margin-top:0.8vh;
 	}
+		.colophon .single-paragraph {
+			margin-bottom: -0.7vh;
+		}
 
 	.colophon p {
 		display:inline-block;
 		margin-left: 1.5vh;
 	}
 
-	.colophon-left, .colophon-right, .colophon-wide, .colophon-spons {
+	.colophon-left, .colophon-right, .colophon-spons {
 		position: absolute;
-		margin-top: 21.5vh;
+		margin-top: 14vh;
 	}
 
 	.colophon-left {
@@ -412,14 +417,10 @@ p, a, h1, h2 {
 		width: 47%;
 	}
 
-	.colophon-wide {
-		margin-left: 3%;
-		width: 63%;
-	}
 
 	.colophon-spons {
-		margin-left: 72%;
-		width: 35%;
+		margin-left: 3%;
+		width: 54%;
 	}
 
 		.colophon-spons img {
@@ -427,6 +428,7 @@ p, a, h1, h2 {
 			height: auto;
 			mix-blend-mode: lighten;
 			opacity: 0.9;
+			margin-top: 1.1vh;
 		}
 /*-------COLOPHON DESKTOP END-----*/
 /*-------CARD CONTAINER END------*/
