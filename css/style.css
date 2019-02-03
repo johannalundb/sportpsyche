@@ -385,7 +385,7 @@ p, a, h1, h2 {
 
 	.colophon h1 {
 		text-transform: uppercase;
-		margin-bottom: 1.5vh;
+		margin-bottom: 0.5vh;
 		margin-top:1.5vh;
 		padding-left: 0;
 	}
@@ -393,12 +393,8 @@ p, a, h1, h2 {
 	.colophon h2 {
 		margin-top:0.8vh;
 	}
-		.colophon .single-paragraph {
-			margin-bottom: -3.9pt;
-		}
 
 	.colophon p {
-		display:inline-block;
 		margin-left: 1.5vh;
 	}
 
