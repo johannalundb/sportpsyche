@@ -315,7 +315,7 @@ p, a, h1, h2 {
 }
 
 #parent { /*desktop*/
-	width: 950vh; /*Bredden på hela containern*/
+	width: 912vh; /*Bredden på hela containern*/
 	margin-left: 5vh;
 	position: relative;
 }
@@ -394,7 +394,7 @@ p, a, h1, h2 {
 		margin-top:0.8vh;
 	}
 		.colophon .single-paragraph {
-			margin-bottom: -0.7vh;
+			margin-bottom: -3.9pt;
 		}
 
 	.colophon p {
@@ -404,7 +404,7 @@ p, a, h1, h2 {
 
 	.colophon-left, .colophon-right, .colophon-spons {
 		position: absolute;
-		margin-top: 14vh;
+		margin-top: 13vh;
 	}
 
 	.colophon-left {
@@ -417,10 +417,14 @@ p, a, h1, h2 {
 		width: 47%;
 	}
 
+	#spons-logo {
+		width: 31vh !important;
+	}
+
 
 	.colophon-spons {
 		margin-left: 3%;
-		width: 54%;
+		width: 100%;
 	}
 
 		.colophon-spons img {
@@ -428,7 +432,7 @@ p, a, h1, h2 {
 			height: auto;
 			mix-blend-mode: lighten;
 			opacity: 0.9;
-			margin-top: 1.1vh;
+			margin-top: 4.5vh;
 		}
 /*-------COLOPHON DESKTOP END-----*/
 /*-------CARD CONTAINER END------*/
