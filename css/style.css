@@ -417,7 +417,6 @@ p, a, h1, h2 {
 		width: 31vh !important;
 	}
 
-
 	.colophon-spons {
 		margin-left: 3%;
 		width: 100%;
@@ -426,7 +425,7 @@ p, a, h1, h2 {
 		.colophon-spons img {
 			width: 100%;
 			height: auto;
-			mix-blend-mode: lighten;
+			/*mix-blend-mode: lighten;*/
 			opacity: 0.9;
 			margin-top: 4.5vh;
 		}
@@ -780,10 +779,15 @@ input {
 		margin-top: 0;
 	}
 
-	.colophon-spons {
-		margin-left: 68%;
-		width: 30%;
+	#spons-logo {
+		width: 100vw !important;
 	}
+	.colophon-spons {
+		margin-left: 12%;
+		width: 76%;
+	}
+
+
 
 
 label {
