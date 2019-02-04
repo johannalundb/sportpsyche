@@ -41,7 +41,7 @@ $(document).ready(function(){
 	});
 
 	$(window).scroll(function() { //döljer filmen när man scrollar längst ner
-		if ($('body').height() <= jQuery(window).scrollTop()/0.5) {
+		if ($('body').height() <= jQuery(window).scrollTop()/0.8) {
 			$('#video-cover').fadeIn(300);
 		}
 		else{
