@@ -6,6 +6,8 @@ var closeVideo = function () {
 var hoverEl = null;
 
 $(document).ready(function(){
+	$(".loader").fadeOut(3000);
+
 	$(".close-startpage").click(function(){
 		$("#lookbook-container").show();
 		$("#desktop-startpage").hide();
@@ -58,38 +60,9 @@ $(document).ready(function(){
 		}
 	});
 
-    setTimeout(function(){ // loader page
-        // $('body').addClass('loaded-fade');
-        $(".loader").fadeOut(2000);
-    }, 1000);
-
-    setTimeout(function(){ // loader page
-        // $('body').addClass('loaded-now');
-        $(".loader").hide();
-    }, 3000);
-
 	$("#close-film").click(closeVideo);
 	
 	
-	
-	// if ( $(window).width() > 600) {
-	// 	$(".gif").hover( // jpg -> gif
-	//         function()
-	//         {
-	//         	self = this;
-	//           hoverEl = setTimeout(function(){
-	//           	var src = $(self).attr("src");
-	//           	$(self).attr("src", src.replace(/\.jpg$/i, ".gif"));
-	//           }, 700);
-	//         },
-	//         function()
-	//         {
-	//           clearTimeout(hoverEl);
-	//           var src = $(this).attr("src");
-	//           $(this).attr("src", src.replace(/\.gif$/i, ".jpg"));
-	//         });
-	// }
-
 	if ( $(window).width() > 600) {
 		$("video.gif").hover( // jpg -> gif
 	        function()

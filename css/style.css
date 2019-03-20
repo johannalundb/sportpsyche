@@ -47,7 +47,7 @@ p, a, h1, h2 {
 
 /*-------LOADING PAGE START------*/
 .loader {
-	display: none;
+	display: block;
     position: fixed;
     top: 0;
     width: 100%;
@@ -140,7 +140,7 @@ p, a, h1, h2 {
 #desktop-logo img {
 	height: 27vh;
 	width: auto;
-	transition: 200ms ease;
+	/*transition: 200ms ease;*/
 }
 
 #desktop-logo #tiny-logo {
